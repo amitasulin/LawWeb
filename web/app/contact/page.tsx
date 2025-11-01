@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import type { Metadata } from "next";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function Contact() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,10 +21,15 @@ export default function Contact() {
     setSubmitStatus("idle");
 
     try {
+      let recaptchaToken = "";
+      if (executeRecaptcha) {
+        recaptchaToken = await executeRecaptcha("contact_form");
+      }
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, recaptchaToken }),
       });
 
       if (response.ok) {

@@ -22,7 +22,31 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // TODO: Add CAPTCHA verification here
+    // Verify reCAPTCHA
+    const { recaptchaToken } = body;
+    if (process.env.RECAPTCHA_SECRET_KEY && recaptchaToken) {
+      try {
+        const recaptchaResponse = await fetch(
+          `https://www.google.com/recaptcha/api/siteverify`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+          }
+        );
+        const recaptchaData = await recaptchaResponse.json();
+        if (!recaptchaData.success || recaptchaData.score < 0.5) {
+          return NextResponse.json(
+            { error: "אימות אבטחה נכשל. נסו שוב." },
+            { status: 400 }
+          );
+        }
+      } catch (error) {
+        console.error("reCAPTCHA verification error:", error);
+        // In production, you might want to block the request
+        // For now, we'll continue but log the error
+      }
+    }
     // TODO: Send email using email service (SendGrid, Resend, etc.)
     // TODO: Save to database if needed
 
