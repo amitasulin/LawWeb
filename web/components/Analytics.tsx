@@ -25,7 +25,7 @@ export default function Analytics() {
         page_path: window.location.pathname,
       });
     }
-  }, []);
+  }, [gaId]);
 
   if (!gaId && !gtmId) {
     return null;

@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold mb-4">1. כללי</h2>
             <p className="text-gray-700 leading-relaxed">
               המשרד מכבד את פרטיות המשתמשים באתר ומתחייב להגן על המידע האישי הנאסף
-              בהתאם לחוק הגנת הפרטיות, התשמ"א-1981, ולכל דין אחר החל בישראל.
+              בהתאם לחוק הגנת הפרטיות, התשמ&quot;א-1981, ולכל דין אחר החל בישראל.
             </p>
           </section>
 

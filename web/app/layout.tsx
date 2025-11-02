@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "עורך דין נדל״ן | משרד עורכי דין מקצועי",
   description: "משרד עורכי דין המתמחה בדיני נדל״ן - ליווי עסקאות, פרויקטים, חוזי שכירות ומיסוי מקרקעין",
   viewport: "width=device-width, initial-scale=1",
-  dir: "rtl",
+
 };
 
 export default function RootLayout({

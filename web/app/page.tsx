@@ -103,7 +103,7 @@ export default function Home() {
               },
             ].map((testimonial, idx) => (
               <div key={idx} className="bg-white p-6 rounded-lg shadow-md">
-                <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+                <p className="text-gray-700 mb-4 italic">&quot;{testimonial.text}&quot;</p>
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.role}</p>
