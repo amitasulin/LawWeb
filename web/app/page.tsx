@@ -1,34 +1,71 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-24 md:py-32 relative">
+      <section className="gradient-hero text-white py-24 md:py-32 relative overflow-hidden">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/80 z-10"></div>
+          <div className="absolute inset-0 opacity-20">
+            <Image
+              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop"
+              alt="משרד עורכי דין מקצועי"
+              fill
+              className="object-cover"
+              priority
+              quality={90}
+            />
+          </div>
+        </div>
+        
         <div className="container-custom relative z-10">
-          <div className="max-w-4xl">
-            <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-accent/20 text-accent-metallic rounded-full text-sm font-semibold mb-6 border border-accent/30">
-                משרד עורכי דין מקצועי
-              </span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="max-w-2xl">
+              <div className="mb-6">
+                <span className="inline-block px-4 py-2 bg-accent/20 text-accent-metallic rounded-full text-sm font-semibold mb-6 border border-accent/30 backdrop-blur-sm">
+                  משרד עורכי דין מקצועי
+                </span>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span className="text-gradient">עומר אסולין</span>
+                <br />
+                <span className="text-white">משרד עורכי דין</span>
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed">
+                חוזים, מקרקעין, תכנון ובנייה, משפט אזרחי
+                <br />
+                <span className="text-accent-metallic font-medium">ליווי משפטי מקצועי ומיומן</span>
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/booking" className="btn-primary text-center">
+                  קבעו פגישה
+                </Link>
+                <Link href="/practice-areas" className="btn-secondary text-center">
+                  תחומי התמחות
+                </Link>
+              </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-gradient">עומר אסולין</span>
-              <br />
-              <span className="text-white">משרד עורכי דין</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed">
-              חוזים, מקרקעין, תכנון ובנייה, משפט אזרחי
-              <br />
-              <span className="text-accent-metallic font-medium">ליווי משפטי מקצועי ומיומן</span>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/booking" className="btn-primary text-center">
-                קבעו פגישה
-              </Link>
-              <Link href="/practice-areas" className="btn-secondary text-center">
-                תחומי התמחות
-              </Link>
+
+            {/* Image Section */}
+            <div className="relative">
+              <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-accent/20">
+                <Image
+                  src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop"
+                  alt="משרד עורכי דין מקצועי - עומר אסולין"
+                  fill
+                  className="object-cover"
+                  priority
+                  quality={90}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/20 to-transparent"></div>
+              </div>
+              {/* Decorative Elements */}
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl hidden lg:block"></div>
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-metallic/20 rounded-full blur-2xl hidden lg:block"></div>
             </div>
           </div>
         </div>
