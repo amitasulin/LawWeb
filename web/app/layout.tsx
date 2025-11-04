@@ -7,8 +7,8 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
-  title: "עורך דין נדל״ן | משרד עורכי דין מקצועי",
-  description: "משרד עורכי דין המתמחה בדיני נדל״ן - ליווי עסקאות, פרויקטים, חוזי שכירות ומיסוי מקרקעין",
+  title: "עומר אסולין משרד עורכי דין | חוזים, מקרקעין, תכנון ובנייה",
+  description: "עומר אסולין משרד עורכי דין - חוזים, מקרקעין, תכנון ובנייה, משפט אזרחי. שירותים משפטיים מקצועיים",
   viewport: "width=device-width, initial-scale=1",
 
 };

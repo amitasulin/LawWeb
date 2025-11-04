@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import CalendlyWidget from "@/components/CalendlyWidget";
 
 export const metadata: Metadata = {
-  title: "קביעת פגישה | משרד עורכי דין נדל״ן",
-  description: "קבעו פגישת ייעוץ עם עורך הדין",
+  title: "קביעת פגישה | עומר אסולין משרד עורכי דין",
+  description: "קבעו פגישת ייעוץ עם עומר אסולין",
 };
 
 export default function Booking() {
@@ -38,10 +38,10 @@ export default function Booking() {
               יש בעיה עם המערכת? צרו קשר ישירות:
             </p>
             <div className="flex justify-center gap-4">
-              <a href="tel:031234567" className="btn-primary">
-                התקשרו: 03-1234567
+              <a href="tel:0525701166" className="btn-primary">
+                התקשרו: 052-5701166
               </a>
-              <a href="mailto:info@lawfirm.co.il" className="btn-secondary">
+              <a href="mailto:OMERASULIN1@GMAIL.COM" className="btn-secondary">
                 שלחו אימייל
               </a>
             </div>

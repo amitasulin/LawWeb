@@ -4,20 +4,29 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-primary-dark text-white py-20">
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              עורך דין נדל״ן מקצועי
+      <section className="gradient-hero text-white py-24 md:py-32 relative">
+        <div className="container-custom relative z-10">
+          <div className="max-w-4xl">
+            <div className="mb-6">
+              <span className="inline-block px-4 py-2 bg-accent/20 text-accent-metallic rounded-full text-sm font-semibold mb-6 border border-accent/30">
+                משרד עורכי דין מקצועי
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <span className="text-gradient">עומר אסולין</span>
+              <br />
+              <span className="text-white">משרד עורכי דין</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              ליווי משפטי מקצועי ומיומן בעסקאות נדל״ן, פרויקטים ומיסוי מקרקעין
+            <p className="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed">
+              חוזים, מקרקעין, תכנון ובנייה, משפט אזרחי
+              <br />
+              <span className="text-accent-metallic font-medium">ליווי משפטי מקצועי ומיומן</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/booking" className="btn-primary bg-accent hover:bg-accent-light text-primary-dark">
+              <Link href="/booking" className="btn-primary text-center">
                 קבעו פגישה
               </Link>
-              <Link href="/practice-areas" className="btn-secondary bg-transparent border-2 border-white hover:bg-white/10">
+              <Link href="/practice-areas" className="btn-secondary text-center">
                 תחומי התמחות
               </Link>
             </div>
@@ -26,9 +35,15 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container-custom">
-          <h2 className="text-4xl font-bold text-center mb-12">תחומי התמחות</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">תחומי התמחות</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              שירותים משפטיים מקיפים בכל תחומי החוזים, מקרקעין, תכנון ובנייה ומשפט אזרחי
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-accent to-accent-metallic mx-auto mt-6 rounded-full"></div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -64,15 +79,21 @@ export default function Home() {
             ].map((service, idx) => (
               <div
                 key={idx}
-                className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                className="card-hover border border-gray-200 rounded-xl p-8 bg-white shadow-md hover:border-accent/30"
               >
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <div className="mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-2xl text-accent-metallic">📋</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-primary">{service.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                 <Link
                   href={service.href}
-                  className="text-accent hover:text-accent-dark font-medium"
+                  className="text-accent hover:text-accent-metallic font-semibold inline-flex items-center gap-2 group"
                 >
-                  קרא עוד →
+                  קרא עוד
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
               </div>
             ))}
@@ -102,10 +123,17 @@ export default function Home() {
                 text: "ייעוץ מס מעולה שחסך לנו כסף רב ומנע בעיות משפטיות.",
               },
             ].map((testimonial, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-lg shadow-md">
-                <p className="text-gray-700 mb-4 italic">&quot;{testimonial.text}&quot;</p>
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
+              <div key={idx} className="bg-white p-8 rounded-xl shadow-lg card-hover border border-gray-100">
+                <div className="mb-4">
+                  <div className="flex gap-1 text-accent mb-4">
+                    {"★★★★★".split("").map((star, i) => (
+                      <span key={i} className="text-lg">{star}</span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 mb-6 italic leading-relaxed text-lg">&quot;{testimonial.text}&quot;</p>
+                <div className="pt-4 border-t border-gray-200">
+                  <p className="font-bold text-primary">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.role}</p>
                 </div>
               </div>
@@ -115,15 +143,16 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-accent py-16">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+      <section className="bg-gradient-to-br from-accent to-accent-metallic py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-accent/90 to-accent-metallic/90"></div>
+        <div className="container-custom text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold text-primary-dark mb-6">
             מוכנים להתחיל?
           </h2>
-          <p className="text-xl text-primary-dark mb-8">
+          <p className="text-xl md:text-2xl text-primary-dark/90 mb-10 font-medium">
             קבעו פגישת ייעוץ ללא התחייבות
           </p>
-          <Link href="/booking" className="btn-primary bg-primary text-white hover:bg-primary-light">
+          <Link href="/booking" className="btn-secondary inline-block text-lg px-8 py-4">
             קבעו פגישה עכשיו
           </Link>
         </div>

@@ -7,29 +7,47 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100">
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-primary">
-            משרד עורכי דין
+          <Link
+            href="/"
+            className="text-2xl font-bold text-primary hover:text-primary-light transition-colors"
+          >
+            <span className="text-accent">עומר אסולין</span> משרד עורכי דין
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="hover:text-accent transition-colors">
+          <div className="hidden md:flex items-center gap-6">
+            <Link
+              href="/"
+              className="text-gray-700 hover:text-accent transition-colors font-medium"
+            >
               בית
             </Link>
-            <Link href="/about" className="hover:text-accent transition-colors">
+            <Link
+              href="/about"
+              className="text-gray-700 hover:text-accent transition-colors font-medium"
+            >
               אודות
             </Link>
-            <Link href="/practice-areas" className="hover:text-accent transition-colors">
+            <Link
+              href="/practice-areas"
+              className="text-gray-700 hover:text-accent transition-colors font-medium"
+            >
               תחומי התמחות
             </Link>
-            <Link href="/blog" className="hover:text-accent transition-colors">
+            <Link
+              href="/blog"
+              className="text-gray-700 hover:text-accent transition-colors font-medium"
+            >
               מאמרים
             </Link>
-            <Link href="/contact" className="hover:text-accent transition-colors">
+            <Link
+              href="/contact"
+              className="text-gray-700 hover:text-accent transition-colors font-medium"
+            >
               יצירת קשר
             </Link>
             <Link href="/booking" className="btn-primary">

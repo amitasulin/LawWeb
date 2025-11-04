@@ -2,20 +2,20 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white mt-20">
-      <div className="container-custom py-12">
+    <footer className="bg-gradient-to-br from-primary-dark via-primary to-primary-light text-white mt-20">
+      <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="text-xl font-bold mb-4">אודות המשרד</h3>
-            <p className="text-gray-300 text-sm">
-              משרד עורכי דין המתמחה בדיני נדל״ן, מספק שירותים משפטיים מקצועיים ללקוחות פרטיים ועסקיים.
+            <h3 className="text-xl font-bold mb-4 text-accent-metallic">אודות המשרד</h3>
+            <p className="text-gray-200 text-sm leading-relaxed">
+              עומר אסולין משרד עורכי דין - חוזים, מקרקעין, תכנון ובנייה, משפט אזרחי. שירותים משפטיים מקצועיים ללקוחות פרטיים ועסקיים.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4">קישורים מהירים</h3>
+            <h3 className="text-xl font-bold mb-4 text-accent-metallic">קישורים מהירים</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/" className="text-gray-300 hover:text-accent transition-colors">
@@ -47,25 +47,24 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">יצירת קשר</h3>
+            <h3 className="text-xl font-bold mb-4 text-accent-metallic">יצירת קשר</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>טלפון: 03-1234567</li>
-              <li>פקס: 03-1234568</li>
+              <li>טלפון: 052-5701166</li>
               <li>
-                <a href="mailto:info@lawfirm.co.il" className="hover:text-accent transition-colors">
-                  info@lawfirm.co.il
+                <a href="mailto:OMERASULIN1@GMAIL.COM" className="hover:text-accent transition-colors">
+                  OMERASULIN1@GMAIL.COM
                 </a>
               </li>
-              <li>רחוב הדוגמה 10, תל אביב</li>
+              <li>חנקין 17, קרית אתא</li>
             </ul>
           </div>
 
           {/* Social & Legal */}
           <div>
-            <h3 className="text-xl font-bold mb-4">רשתות חברתיות</h3>
+            <h3 className="text-xl font-bold mb-4 text-accent-metallic">רשתות חברתיות</h3>
             <div className="flex gap-4 mb-6">
               <a
-                href="https://wa.me/972501234567"
+                href="https://wa.me/972525701166"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-accent transition-colors"
@@ -110,7 +109,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} משרד עורכי דין. כל הזכויות שמורות.</p>
+          <p>© {new Date().getFullYear()} עומר אסולין משרד עורכי דין. כל הזכויות שמורות.</p>
         </div>
       </div>
     </footer>

@@ -10,14 +10,21 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#1a1a2e",
-          light: "#2a2a3e",
-          dark: "#0a0a1e",
+          DEFAULT: "#1e3a5f", // כחול מטאלי כהה
+          light: "#2d4f7a",
+          dark: "#152a4a",
+          lighter: "#3d6b9f",
         },
         accent: {
-          DEFAULT: "#d4af37",
+          DEFAULT: "#d4af37", // זהב מטאלי
           light: "#e5c158",
           dark: "#b8941f",
+          metallic: "#f4d03f", // זהב מטאלי בהיר יותר
+        },
+        blue: {
+          metallic: "#4a90e2", // כחול מטאלי
+          dark: "#1e3a5f",
+          light: "#6ba3e8",
         },
       },
       fontFamily: {

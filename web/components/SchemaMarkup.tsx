@@ -4,21 +4,22 @@ export default function SchemaMarkup() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "משרד עורכי דין נדל״ן",
-    description: "משרד עורכי דין המתמחה בדיני נדל״ן - ליווי עסקאות, פרויקטים, חוזי שכירות ומיסוי מקרקעין",
+    name: "עומר אסולין משרד עורכי דין",
+    alternateName: "OMER ASULIN LAW OFFICE",
+    description: "עומר אסולין משרד עורכי דין - חוזים, מקרקעין, תכנון ובנייה, משפט אזרחי",
     url: baseUrl,
-    telephone: "03-1234567",
-    email: "info@lawfirm.co.il",
+    telephone: "052-5701166",
+    email: "OMERASULIN1@GMAIL.COM",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "רחוב הדוגמה 10",
-      addressLocality: "תל אביב",
+      streetAddress: "חנקין 17",
+      addressLocality: "קרית אתא",
       addressCountry: "IL",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "32.0853",
-      longitude: "34.7818",
+      latitude: "32.8025",
+      longitude: "35.1033",
     },
     priceRange: "$$",
     areaServed: {
@@ -26,11 +27,10 @@ export default function SchemaMarkup() {
       name: "Israel",
     },
     serviceType: [
-      "עסקאות נדל״ן",
-      "ליווי פרויקטים",
-      "חוזי שכירות",
-      "מיסוי מקרקעין",
-      "ליטיגציה נדל״נית",
+      "חוזים",
+      "מקרקעין",
+      "תכנון ובנייה",
+      "משפט אזרחי",
     ],
   };
 

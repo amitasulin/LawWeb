@@ -152,25 +152,20 @@ export default function Contact() {
             <div className="space-y-6">
               <div>
                 <h3 className="font-semibold mb-2">כתובת המשרד</h3>
-                <p className="text-gray-700">רחוב הדוגמה 10, תל אביב</p>
+                <p className="text-gray-700">חנקין 17, קרית אתא</p>
               </div>
 
               <div>
                 <h3 className="font-semibold mb-2">טלפון</h3>
-                <a href="tel:031234567" className="text-accent hover:text-accent-dark">
-                  03-1234567
+                <a href="tel:0525701166" className="text-accent hover:text-accent-dark">
+                  052-5701166
                 </a>
               </div>
 
               <div>
-                <h3 className="font-semibold mb-2">פקס</h3>
-                <p className="text-gray-700">03-1234568</p>
-              </div>
-
-              <div>
                 <h3 className="font-semibold mb-2">אימייל</h3>
-                <a href="mailto:info@lawfirm.co.il" className="text-accent hover:text-accent-dark">
-                  info@lawfirm.co.il
+                <a href="mailto:OMERASULIN1@GMAIL.COM" className="text-accent hover:text-accent-dark">
+                  OMERASULIN1@GMAIL.COM
                 </a>
               </div>
 
@@ -187,7 +182,7 @@ export default function Contact() {
                 <h3 className="font-semibold mb-4">קישורים מהירים</h3>
                 <div className="flex gap-4">
                   <a
-                    href="https://wa.me/972501234567"
+                    href="https://wa.me/972525701166"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary bg-green-500 hover:bg-green-600"
@@ -203,11 +198,31 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
+              {/* Map */}
               <div className="mt-8">
-                <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">מפה</p>
+                <h3 className="font-semibold mb-3">מיקום המשרד</h3>
+                <div className="w-full h-64 rounded-lg overflow-hidden border border-gray-300 shadow-md">
+                  <iframe
+                    src="https://www.google.com/maps?q=32.8025,35.1033&hl=he&z=15&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="מיקום המשרד - חנקין 17, קרית אתא"
+                  ></iframe>
                 </div>
+                <p className="text-sm text-gray-600 mt-2">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=32.8025,35.1033"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent-dark inline-flex items-center gap-1"
+                  >
+                    פתח ב-Google Maps →
+                  </a>
+                </p>
               </div>
             </div>
           </div>

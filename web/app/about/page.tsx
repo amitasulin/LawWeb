@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "אודות | משרד עורכי דין נדל״ן",
-  description: "למידע על עורך הדין, הניסיון, ההשכלה והחזון של המשרד",
+  title: "אודות | עומר אסולין משרד עורכי דין",
+  description: "למידע על עומר אסולין, הניסיון, ההשכלה והחזון של המשרד",
 };
 
 export default function About() {
@@ -15,10 +15,10 @@ export default function About() {
           <section>
             <h2 className="text-3xl font-semibold mb-4">קצת עלי</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              עורך דין עם ניסיון של מעל 15 שנים בתחום דיני הנדל״ן. התמחות עמוקה 
-              בליווי משפטי של עסקאות נדל״ן מורכבות, פרויקטים בנייה ומיסוי מקרקעין.
+              עומר אסולין, עורך דין עם ניסיון בתחומי חוזים, מקרקעין, תכנון ובנייה ומשפט אזרחי. 
+              התמחות עמוקה בליווי משפטי של עסקאות מורכבות, פרויקטים בנייה ומיסוי מקרקעין.
             </p>
-            <p className="text-lg liberally-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed">
               המשרד מספק שירותים משפטיים מקצועיים ללקוחות פרטיים, יזמים וקבלנים,
               תוך מתן תשומת לב אישית ומותאמת לכל לקוח ולכל פרויקט.
             </p>
