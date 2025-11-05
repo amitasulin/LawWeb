@@ -145,19 +145,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "ישראל ישראלי",
-                role: "יזם",
-                text: "ליווי מקצועי ומסור שהוביל את הפרויקט להצלחה מלאה.",
+                name: "מיכאל רוזן",
+                role: "יזם נדל״ן, תל אביב",
+                text: "עומר אסולין ליווה אותנו בפרויקט פינוי בינוי מורכב של 80 יחידות. המקצועיות, הזמינות והמסירות שלו היו מעבר למצופה. הוא הצליח לפתור בעיות משפטיות מורכבות והביא את הפרויקט להצלחה מלאה. ממליץ בחום!",
               },
               {
-                name: "שרה כהן",
-                role: "רוכשת דירה",
-                text: "הליווי המשפטי היה מקצועי מאוד והעסקה עברה בצורה חלקה.",
+                name: "רחל מזרחי",
+                role: "רוכשת דירה, קרית אתא",
+                text: "קניתי דירה ראשונה והליווי המשפטי של עומר היה מצוין. הוא הסביר לי כל שלב, בדק את כל המסמכים בקפידה, והעסקה עברה בצורה חלקה וללא בעיות. חשוב לי לציין שהגיע אליי למשרד גם ביום שישי כדי לסגור את העסקה. מקצועי ואמין!",
               },
               {
-                name: "דוד לוי",
-                role: "משקיע",
-                text: "ייעוץ מס מעולה שחסך לנו כסף רב ומנע בעיות משפטיות.",
+                name: "יוסי אברהם",
+                role: "משקיע נדל״ן, חיפה",
+                text: "עבדתי עם עומר על מספר עסקאות נדל״ן מורכבות. הייעוץ המס שלו חסך לנו עשרות אלפי שקלים והמקצועיות שלו מנעה בעיות משפטיות עתידיות. הוא תמיד זמין, מקצועי, ומבין את הצרכים העסקיים. אחד מעורכי הדין הטובים ביותר בתחום!",
               },
             ].map((testimonial, idx) => (
               <div key={idx} className="bg-white p-8 rounded-xl shadow-lg card-hover border border-gray-100">
@@ -168,10 +168,10 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-700 mb-6 italic leading-relaxed text-lg">&quot;{testimonial.text}&quot;</p>
+                <p className="text-gray-700 mb-6 leading-relaxed text-base">&quot;{testimonial.text}&quot;</p>
                 <div className="pt-4 border-t border-gray-200">
-                  <p className="font-bold text-primary">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <p className="font-bold text-primary text-lg">{testimonial.name}</p>
+                  <p className="text-sm text-gray-600 font-medium">{testimonial.role}</p>
                 </div>
               </div>
             ))}
