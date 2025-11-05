@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CalendlyWidget from "@/components/CalendlyWidget";
+import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
   title: "קביעת פגישה | עומר אסולין משרד עורכי דין",
@@ -7,29 +7,28 @@ export const metadata: Metadata = {
 };
 
 export default function Booking() {
-  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || "";
-
   return (
     <main className="min-h-screen py-20">
       <div className="container-custom">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">קביעת פגישה</h1>
         <p className="text-xl text-gray-600 mb-12">
-          בחרו תאריך וזמן נוחים לפגישת הייעוץ
+          מלאו את הטופס ונחזור אליכם לאישור הפגישה
         </p>
 
         <div className="max-w-4xl mx-auto">
-          {/* Calendly Embed */}
-          <div className="bg-white border border-gray-200 rounded-lg p-8 mb-8">
-            <CalendlyWidget url={calendlyUrl} />
+          {/* Booking Form */}
+          <div className="mb-8">
+            <BookingForm />
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-6">
+          <div className="bg-gray-50 rounded-lg p-6 mb-8">
             <h2 className="text-xl font-semibold mb-4">מידע נוסף</h2>
             <ul className="space-y-2 text-gray-700">
-              <li>• פגישות זמינות בימים ראשון-חמישי, 09:00-18:00</li>
-              <li>• משך הפגישה: 45 דקות</li>
-              <li>• פגישות זמינות במשרד או אונליין</li>
-              <li>• תזכורת תישלח יום לפני הפגישה</li>
+              <li>✅ פגישות זמינות בימים ראשון-חמישי, 09:00-18:00</li>
+              <li>✅ משך הפגישה: 30-45 דקות (לפי בחירתכם)</li>
+              <li>✅ פגישות זמינות במשרד, שיחת טלפון או אונליין</li>
+              <li>✅ נחזור אליכם תוך 24 שעות לאישור הפגישה</li>
+              <li>✅ תזכורת תישלח יום לפני הפגישה</li>
             </ul>
           </div>
 

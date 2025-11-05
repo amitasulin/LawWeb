@@ -18,12 +18,20 @@ cp .env.example .env.local
 
 עדכנו את הערכים הבאים:
 
-- `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` - מפתח אתר של Google reCAPTCHA
-- `RECAPTCHA_SECRET_KEY` - מפתח סודי של Google reCAPTCHA
-- `NEXT_PUBLIC_CALENDLY_URL` - כתובת ה-Calendly שלכם
+### Calendly (חובה לפגישות)
+כדי לקבל כתובת Calendly:
+1. הירשמו/התחברו ל-[Calendly.com](https://calendly.com)
+2. צרו **Event Type** חדש (סוג פגישה) - לדוגמה: "ייעוץ ראשוני 30 דקות"
+3. לחצו על **"Share"** → **"Add to website"** → **"Inline embed"**
+4. העתיקו את הכתובת מהטופס (נראית כך: `https://calendly.com/your-username/30min`)
+5. הוסיפו ל-`.env.local`: `NEXT_PUBLIC_CALENDLY_URL=https://calendly.com/your-username/30min`
+
+### משתנים נוספים:
+- `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` - מפתח אתר של Google reCAPTCHA (אופציונלי)
+- `RECAPTCHA_SECRET_KEY` - מפתח סודי של Google reCAPTCHA (אופציונלי)
 - `NEXT_PUBLIC_GA_ID` - מזהה Google Analytics (אופציונלי)
 - `NEXT_PUBLIC_GTM_ID` - מזהה Google Tag Manager (אופציונלי)
-- `NEXT_PUBLIC_SITE_URL` - כתובת האתר המלאה
+- `NEXT_PUBLIC_SITE_URL` - כתובת האתר המלאה (לדוגמה: `https://lawfirm.co.il`)
 
 ## הרצה
 

@@ -8,9 +8,13 @@ import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   title: "עומר אסולין משרד עורכי דין | חוזים, מקרקעין, תכנון ובנייה",
-  description: "עומר אסולין משרד עורכי דין - חוזים, מקרקעין, תכנון ובנייה, משפט אזרחי. שירותים משפטיים מקצועיים",
-  viewport: "width=device-width, initial-scale=1",
+  description:
+    "עומר אסולין משרד עורכי דין - חוזים, מקרקעין, תכנון ובנייה, משפט אזרחי. שירותים משפטיים מקצועיים",
+};
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

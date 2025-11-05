@@ -4,7 +4,7 @@ import { useState, FormEvent } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function Contact() {
-  const { executeRecaptcha } = useGoogleReCaptcha();
+  const { executeRecaptcha } = useGoogleReCaptcha() || { executeRecaptcha: null };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,8 +22,13 @@ export default function Contact() {
 
     try {
       let recaptchaToken = "";
-      if (executeRecaptcha) {
-        recaptchaToken = await executeRecaptcha("contact_form");
+      if (executeRecaptcha && typeof executeRecaptcha === "function") {
+        try {
+          recaptchaToken = await executeRecaptcha("contact_form");
+        } catch (error) {
+          // If reCAPTCHA fails, continue without it (for development)
+          console.warn("reCAPTCHA error:", error);
+        }
       }
 
       const response = await fetch("/api/contact", {
