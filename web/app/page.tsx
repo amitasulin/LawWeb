@@ -5,14 +5,14 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-24 md:py-32 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-primary to-primary-dark text-white py-24 md:py-32 relative overflow-hidden">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/80 z-10"></div>
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 opacity-40">
             <Image
-              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop"
-              alt="משרד עורכי דין מקצועי"
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+              alt="גורדי שחקים מודרניים"
               fill
               className="object-cover"
               priority
@@ -26,7 +26,7 @@ export default function Home() {
             {/* Text Content */}
             <div className="max-w-2xl">
               <div className="mb-6">
-                <span className="inline-block px-4 py-2 bg-accent/20 text-accent-metallic rounded-full text-sm font-semibold mb-6 border border-accent/30 backdrop-blur-sm">
+                <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6 border border-accent/30 backdrop-blur-sm">
                   משרד עורכי דין מקצועי
                 </span>
               </div>
@@ -38,7 +38,7 @@ export default function Home() {
               <p className="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed">
                 חוזים, מקרקעין, תכנון ובנייה, משפט אזרחי
                 <br />
-                <span className="text-accent-metallic font-medium">ליווי משפטי מקצועי ומיומן</span>
+                <span className="text-accent font-medium">ליווי משפטי מקצועי ומיומן</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/booking" className="btn-primary text-center">
@@ -79,7 +79,7 @@ export default function Home() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               שירותים משפטיים מקיפים בכל תחומי החוזים, מקרקעין, תכנון ובנייה ומשפט אזרחי
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-accent to-accent-metallic mx-auto mt-6 rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-accent to-accent-light mx-auto mt-6 rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -120,14 +120,14 @@ export default function Home() {
               >
                 <div className="mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-2xl text-accent-metallic">📋</span>
+                    <span className="text-2xl text-accent">📋</span>
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-primary">{service.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                 <Link
                   href={service.href}
-                  className="text-accent hover:text-accent-metallic font-semibold inline-flex items-center gap-2 group"
+                  className="text-accent hover:text-accent-light font-semibold inline-flex items-center gap-2 group"
                 >
                   קרא עוד
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -180,13 +180,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-accent to-accent-metallic py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-accent/90 to-accent-metallic/90"></div>
+      <section className="bg-accent py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-accent/90 to-accent-light/90"></div>
         <div className="container-custom text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-bold text-primary-dark mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
             מוכנים להתחיל?
           </h2>
-          <p className="text-xl md:text-2xl text-primary-dark/90 mb-10 font-medium">
+          <p className="text-xl md:text-2xl text-primary mb-10 font-medium">
             קבעו פגישת ייעוץ ללא התחייבות
           </p>
           <Link href="/booking" className="btn-secondary inline-block text-lg px-8 py-4">
