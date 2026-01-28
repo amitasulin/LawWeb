@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { sendContactEmail } from "@/lib/email";
 
 export async function POST(request: NextRequest) {
   try {
@@ -47,20 +48,28 @@ export async function POST(request: NextRequest) {
         // For now, we'll continue but log the error
       }
     }
-    // TODO: Send email using email service (SendGrid, Resend, etc.)
-    // TODO: Save to database if needed
+    // Send email
+    try {
+      await sendContactEmail({
+        name,
+        email,
+        phone: phone || "",
+        subject,
+        message,
+      });
+      console.log("Contact form submission sent to OMERASULIN1@GMAIL.COM:", {
+        name,
+        email,
+        phone,
+        subject,
+        message,
+        timestamp: new Date().toISOString(),
+      });
+    } catch (emailError) {
+      console.error("Failed to send contact email:", emailError);
+      // Still return success to user, but log the error
+    }
 
-    // For now, just log the submission
-    console.log("Contact form submission:", {
-      name,
-      email,
-      phone,
-      subject,
-      message,
-      timestamp: new Date().toISOString(),
-    });
-
-    // Simulate successful submission
     return NextResponse.json(
       { message: "ההודעה התקבלה בהצלחה" },
       { status: 200 }

@@ -41,8 +41,8 @@ export default function Home() {
                 <span className="text-accent font-medium">ליווי משפטי מקצועי ומיומן</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/booking" className="btn-primary text-center">
-                  קבעו פגישה
+                <Link href="/contact" className="btn-primary text-center">
+                  יצירת קשר
                 </Link>
                 <Link href="/practice-areas" className="btn-secondary text-center">
                   תחומי התמחות
@@ -147,17 +147,17 @@ export default function Home() {
               {
                 name: "מיכאל רוזן",
                 role: "יזם נדל״ן, תל אביב",
-                text: "עומר אסולין ליווה אותנו בפרויקט פינוי בינוי מורכב של 80 יחידות. המקצועיות, הזמינות והמסירות שלו היו מעבר למצופה. הוא הצליח לפתור בעיות משפטיות מורכבות והביא את הפרויקט להצלחה מלאה. ממליץ בחום!",
+                text: "עומר ליווה אותנו בפרויקט פינוי בינוי. הוא היה מקצועי וזמין, ועזר לנו להתמודד עם האתגרים המשפטיים שעלו במהלך הפרויקט. התרשמתי מהגישה המסודרת והמקצועית שלו.",
               },
               {
                 name: "רחל מזרחי",
                 role: "רוכשת דירה, קרית אתא",
-                text: "קניתי דירה ראשונה והליווי המשפטי של עומר היה מצוין. הוא הסביר לי כל שלב, בדק את כל המסמכים בקפידה, והעסקה עברה בצורה חלקה וללא בעיות. חשוב לי לציין שהגיע אליי למשרד גם ביום שישי כדי לסגור את העסקה. מקצועי ואמין!",
+                text: "קניתי דירה ראשונה והליווי המשפטי של עומר עזר לי מאוד. הוא הסביר לי את התהליך, בדק את המסמכים, והעסקה עברה בצורה תקינה. הרגשתי שיש לי מישהו שאפשר לסמוך עליו.",
               },
               {
                 name: "יוסי אברהם",
                 role: "משקיע נדל״ן, חיפה",
-                text: "עבדתי עם עומר על מספר עסקאות נדל״ן מורכבות. הייעוץ המס שלו חסך לנו עשרות אלפי שקלים והמקצועיות שלו מנעה בעיות משפטיות עתידיות. הוא תמיד זמין, מקצועי, ומבין את הצרכים העסקיים. אחד מעורכי הדין הטובים ביותר בתחום!",
+                text: "עבדתי עם עומר על מספר עסקאות. הוא עזר לי להבין את ההיבטים המשפטיים והמסיים של העסקאות, וזה עזר לי לקבל החלטות מושכלות. מקצועי וזמין.",
               },
             ].map((testimonial, idx) => (
               <div key={idx} className="bg-white p-8 rounded-xl shadow-lg card-hover border border-gray-100">
@@ -187,10 +187,10 @@ export default function Home() {
             מוכנים להתחיל?
           </h2>
           <p className="text-xl md:text-2xl text-primary mb-10 font-medium">
-            קבעו פגישת ייעוץ ללא התחייבות
+            יצירת קשר לייעוץ ראשוני ללא התחייבות
           </p>
-          <Link href="/booking" className="btn-secondary inline-block text-lg px-8 py-4">
-            קבעו פגישה עכשיו
+          <Link href="/contact" className="btn-secondary inline-block text-lg px-8 py-4">
+            יצירת קשר עכשיו
           </Link>
         </div>
       </section>

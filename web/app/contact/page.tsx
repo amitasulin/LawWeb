@@ -53,12 +53,18 @@ export default function Contact() {
   return (
     <main className="min-h-screen py-20">
       <div className="container-custom">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8">יצירת קשר</h1>
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">יצירת קשר</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            נשמח לעמוד לרשותכם ולסייע בכל שאלה או בקשה. צרו קשר ונחזור אליכם בהקדם.
+          </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-accent to-accent-light mx-auto mt-6 rounded-full"></div>
+        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-6">שלחו לנו הודעה</h2>
+          <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+            <h2 className="text-2xl font-semibold mb-6 text-primary">שלחו לנו הודעה</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -70,7 +76,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                  className="w-full max-w-md px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
                 />
               </div>
 
@@ -84,7 +90,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                  className="w-full max-w-md px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
                 />
               </div>
 
@@ -97,7 +103,7 @@ export default function Contact() {
                   id="phone"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                  className="w-full max-w-md px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
                 />
               </div>
 
@@ -111,7 +117,7 @@ export default function Contact() {
                   required
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                  className="w-full max-w-md px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
                 />
               </div>
 
@@ -125,7 +131,7 @@ export default function Contact() {
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                  className="w-full max-w-md px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
                 />
               </div>
 
@@ -144,7 +150,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                className="btn-primary w-full max-w-md disabled:opacity-50 disabled:cursor-not-allowed text-lg py-3"
               >
                 {isSubmitting ? "שולח..." : "שלח הודעה"}
               </button>
@@ -152,8 +158,8 @@ export default function Contact() {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-6">פרטי יצירת קשר</h2>
+          <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-xl shadow-lg p-8 border border-primary/10">
+            <h2 className="text-2xl font-semibold mb-6 text-primary">פרטי יצירת קשר</h2>
             <div className="space-y-6">
               <div>
                 <h3 className="font-semibold mb-2">כתובת המשרד</h3>
@@ -193,12 +199,6 @@ export default function Contact() {
                     className="btn-primary bg-green-500 hover:bg-green-600"
                   >
                     וואטסאפ
-                  </a>
-                  <a
-                    href="/booking"
-                    className="btn-secondary"
-                  >
-                    קבעו פגישה
                   </a>
                 </div>
               </div>

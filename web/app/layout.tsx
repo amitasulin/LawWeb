@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl">
-      <body className="font-hebrew antialiased bg-white text-primary">
+      <body className="font-hebrew antialiased bg-white text-gray-900">
         <SchemaMarkup />
         <Analytics />
         <CaptchaProvider>

@@ -171,37 +171,6 @@ export default function PracticeAreaDetail({ params }: { params: { slug: string 
               ))}
             </ul>
           </div>
-
-          {area.additionalInfo && (
-            <div className="mb-10 bg-gradient-to-br from-primary/5 to-accent/5 p-6 rounded-xl border border-primary/10">
-              <h2 className="text-2xl font-bold text-primary mb-4">מידע נוסף:</h2>
-              <ul className="space-y-3">
-                {area.additionalInfo.map((info, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-gray-700">
-                    <span className="text-accent-metallic mt-2">✓</span>
-                    <span className="leading-relaxed">{info}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/contact" 
-                className="btn-primary text-center"
-              >
-                צרו קשר לייעוץ
-              </Link>
-              <Link 
-                href="/booking" 
-                className="btn-secondary text-center"
-              >
-                קבעו פגישה
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </main>

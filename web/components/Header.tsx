@@ -38,20 +38,8 @@ export default function Header() {
             >
               תחומי התמחות
             </Link>
-            <Link
-              href="/blog"
-              className="text-gray-700 hover:text-accent transition-colors font-medium"
-            >
-              מאמרים
-            </Link>
-            <Link
-              href="/contact"
-              className="text-gray-700 hover:text-accent transition-colors font-medium"
-            >
+            <Link href="/contact" className="btn-primary">
               יצירת קשר
-            </Link>
-            <Link href="/booking" className="btn-primary">
-              קבעו פגישה
             </Link>
           </div>
 
@@ -111,25 +99,11 @@ export default function Header() {
               תחומי התמחות
             </Link>
             <Link
-              href="/blog"
-              className="block hover:text-accent transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              מאמרים
-            </Link>
-            <Link
               href="/contact"
-              className="block hover:text-accent transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              יצירת קשר
-            </Link>
-            <Link
-              href="/booking"
               className="btn-primary inline-block"
               onClick={() => setIsMenuOpen(false)}
             >
-              קבעו פגישה
+              יצירת קשר
             </Link>
           </div>
         )}

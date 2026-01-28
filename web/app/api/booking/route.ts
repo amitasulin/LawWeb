@@ -1,12 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
+import { sendBookingEmail } from "@/lib/email";
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, preferredDate, preferredTime, meetingType, message } = body;
+    const {
+      name,
+      email,
+      phone,
+      preferredDate,
+      preferredTime,
+      meetingType,
+      message,
+    } = body;
 
     // Validate required fields
-    if (!name || !email || !phone || !preferredDate || !preferredTime || !meetingType) {
+    if (
+      !name ||
+      !email ||
+      !phone ||
+      !preferredDate ||
+      !preferredTime ||
+      !meetingType
+    ) {
       return NextResponse.json(
         { error: "כל השדות המסומנים ב-* הם חובה" },
         { status: 400 }
@@ -34,8 +50,8 @@ export async function POST(request: NextRequest) {
     // Format the meeting type in Hebrew
     const meetingTypeHebrew: Record<string, string> = {
       "in-person": "פגישה במשרד",
-      "phone": "שיחת טלפון",
-      "video": "פגישה אונליין",
+      phone: "שיחת טלפון",
+      video: "פגישה אונליין",
     };
 
     // Log the booking request
@@ -50,11 +66,6 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString(),
     });
 
-    // TODO: Send email notification to the law office
-    // TODO: Send confirmation email to the client
-    // TODO: Save to database if needed
-    // TODO: Add to calendar system
-
     // Format date in Hebrew
     const date = new Date(preferredDate);
     const dateStr = date.toLocaleDateString("he-IL", {
@@ -64,12 +75,23 @@ export async function POST(request: NextRequest) {
       day: "numeric",
     });
 
-    // For now, just return success
-    // In production, you would:
-    // 1. Send email to office: OMERASULIN1@GMAIL.COM
-    // 2. Send confirmation email to client
-    // 3. Save to database
-    // 4. Add calendar event (Google Calendar API, etc.)
+    // Send email notification to the law office
+    try {
+      await sendBookingEmail({
+        name,
+        email,
+        phone,
+        preferredDate,
+        preferredTime,
+        meetingType,
+        message,
+      });
+      console.log("Booking email sent successfully to omerasulin1@gmail.com");
+    } catch (emailError) {
+      console.error("Failed to send booking email:", emailError);
+      // Continue even if email fails - we still want to return success to the user
+      // In production, you might want to log this to a monitoring service
+    }
 
     return NextResponse.json(
       {

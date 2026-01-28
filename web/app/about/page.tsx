@@ -27,7 +27,7 @@ export default function About() {
           <section>
             <h2 className="text-3xl font-semibold mb-4">השכלה והכשרה</h2>
             <ul className="space-y-2 text-lg text-gray-700">
-              <li>• תואר ראשון במשפטים (LL.B) מאוניברסיטת תל אביב</li>
+              <li>• תואר ראשון במשפטים (LL.B) מכללת נתניה</li>
               <li>• התמחות במשרד מוביל בתחום הנדל״ן</li>
               <li>• חבר בלשכת עורכי הדין בישראל</li>
               <li>• השתלמויות מקצועיות מתמשכות בתחום הנדל״ן והמיסוי</li>
