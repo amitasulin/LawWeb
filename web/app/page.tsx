@@ -25,11 +25,6 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="max-w-2xl">
-              <div className="mb-6">
-                <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6 border border-accent/30 backdrop-blur-sm">
-                  משרד עורכי דין מקצועי
-                </span>
-              </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                 <span className="text-gradient">עומר אסולין</span>
                 <br />
